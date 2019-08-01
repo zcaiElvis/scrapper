@@ -1,0 +1,12 @@
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+import time
+URL = 'http://ion.energy.ubc.ca/ion/Historical/DisplayLogs.aspx?__EVENTTARGET=&__EVENTARGUMENT=&__VIEWSTATE=hNkG17Ac9KUZkNTbiH8zrcCESlcrDbuA4EKQ449ngIc9HiULB4YJQ%2BPHhBdxMQRSq%2BkOgKUAeQOtfijcUNE1yvlZDqhw9%2BEqtx%2BbQHIkf3Xlx3V0%2BQhDjFuLTqb%2FXZQeYNl03xm9w9TGR0etE1SpHPMKajRoLjXCAI3Ek5lUVsjdJxXy%2FKrh9up3zs1MvjYRlfHvCq8vIE8v3fYXsXMTzW8l0%2BcFubSoDgmEVU6OI9H%2BwWeQLGk0zOYFIl3dlsIDHr0Mctv2rxCE8SF4DTEjUw%3D%3D&__VIEWSTATEGENERATOR=9102DD03&__PREVIOUSPAGE=ixbcWwXQbQbbf6zUL7e8EXyDv2Y0qDrguTIfrR19V7Y5_S3dNc7ZRReR6WVNZM0s9S3yIE40A5B6mdBvFfGHd-m0d21rAUUlIEieJWbVYsY1&__EVENTVALIDATION=cCUwFA9iGTOP9mjiVRTrv7WLsszPo2XbKzM1syQr4tCyfsuwm5O%2Fq1hNz4CAJws3Eez4%2BeCr7di3dIwFp7F8y4J1Zok719ebcB0IfWLc9p4C7NnGp3OUzN%2FXOXPVvzWV9dtVDDb3Dz5wrjdz4GZrZFi5VefV7M9IdfYHCKQjEINgHl9fb56KyBz5F5Gyx%2Bej1goqpPlypHM9HQzwVMh0RtHw%2BJm6nyN%2F7RItzye4Fh0NYsjgJFk6VYk7Mbs5sYHNW5GcXLrXkqJeVcHQ5s8TvYfbXYcgp7JvkTmuXL%2BoZlA%3D&dgm=%2F%2Fbis-appionpme-p%2FION-Ent%2Fconfig%2Fdiagrams%2Fud%2FUBC_SUS%2Fsub_diagrams%2FMacMillan_386-device_template_elec.dgm&node=Buildings.MacMillan_386&queryId=f6b9062f-2973-485f-a21f-ae3f4c411a89&logServerName=QUERYSERVER.BIS-APPIONPME-P&logServerHandle=327952&whereClause=yesterday%28%29&btnSubmit=Show+Table'
+chromeBrowser = webdriver.Chrome(executable_path = './chromedriver')
+chromeBrowser.get(URL)
+time.sleep(2)
+#search = chromeBrowser.find_element_by_class_name('dataRow')
+search = chromeBrowser.find_element_by_id('myTable')
+
+print(search.get_attribute)
+print(search)
